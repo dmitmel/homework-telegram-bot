@@ -1,0 +1,8 @@
+{
+  "bot": {
+    "token": ""
+  },
+  "db": {
+    "path": "db.json"
+  }
+}
