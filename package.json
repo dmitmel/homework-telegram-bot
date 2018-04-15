@@ -2,7 +2,7 @@
   "name": "homework-telegram-bot",
   "version": "1.0.0",
   "description": "This bot will help you share your school homework with your classmates. Just add it to any group to begin!",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/dmitmel/homework-telegram-bot",
   "keywords": [
     "telegram",
