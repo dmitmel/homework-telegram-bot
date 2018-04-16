@@ -17,11 +17,13 @@
   "bugs": "https://github.com/dmitmel/homework-telegram-bot/issues",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "dev": "supervisor index.js"
+    "start": "node scripts/start.js",
+    "webhook": "node scripts/webhook.js",
+    "webhook:local": "node scripts/webhookLocal.js"
   },
   "dependencies": {
     "chalk": "^2.3.2",
+    "localtunnel": "^1.9.0",
     "telegraf": "^3.14.1",
     "winston": "^3.0.0-rc4"
   },

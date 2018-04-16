@@ -1,6 +1,7 @@
 {
   "bot": {
-    "token": ""
+    "token": "",
+    "webhookPath": "/secret-path"
   },
   "db": {
     "path": "db.json"
