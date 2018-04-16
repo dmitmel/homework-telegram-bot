@@ -3,9 +3,11 @@ const localtunnel = require('localtunnel');
 const logger = require('../lib/logger');
 const { onExit } = require('../lib/exit');
 const getEnv = require('../lib/utils/getEnv');
-const { startWebhook } = require('../lib/');
+const Bot = require('../lib/bot');
 
 const port = getEnv('WEBHOOK_PORT', 3000);
+
+const bot = new Bot();
 
 logger.info('creating local tunnel');
 const tunnel = localtunnel(port, (error, tunnelInfo) => {
@@ -14,7 +16,7 @@ const tunnel = localtunnel(port, (error, tunnelInfo) => {
   const { url } = tunnelInfo;
 
   logger.info('local tunnel created: %s', chalk.cyan(url));
-  startWebhook(url, port);
+  bot.startWebhook(url, port);
 });
 
 onExit(() => {
