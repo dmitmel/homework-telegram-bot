@@ -1552,7 +1552,13 @@ table@4.0.2:
     slice-ansi "1.0.0"
     string-width "^2.1.1"
 
-telegraf@^3.14.1:
+telegraf-calendar-telegram@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/telegraf-calendar-telegram/-/telegraf-calendar-telegram-1.5.4.tgz#cae88f78ed8d74593c59cab692a5d846ddd25def"
+  dependencies:
+    telegraf "^3.6.7"
+
+telegraf@^3.14.1, telegraf@^3.6.7:
   version "3.20.0"
   resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-3.20.0.tgz#b45f35209e505e6dd1cbeff94c5d85f02db52f5d"
   dependencies:
