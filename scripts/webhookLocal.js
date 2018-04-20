@@ -3,7 +3,7 @@ const localtunnel = require('localtunnel');
 const logger = require('../lib/logger');
 const onExit = require('../lib/onExit');
 const getEnv = require('../lib/utils/getEnv');
-const Bot = require('../lib/bot');
+const Bot = require('../lib');
 
 const port = getEnv('WEBHOOK_PORT', 3000);
 
