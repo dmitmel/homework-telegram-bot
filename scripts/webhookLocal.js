@@ -1,7 +1,7 @@
 const chalk = require('chalk').default;
 const localtunnel = require('localtunnel');
 const logger = require('../lib/logger');
-const { onExit } = require('../lib/exit');
+const onExit = require('../lib/onExit');
 const getEnv = require('../lib/utils/getEnv');
 const Bot = require('../lib/bot');
 
