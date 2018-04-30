@@ -262,6 +262,14 @@ chalk@^2.0.0, chalk@^2.1.0, chalk@^2.3.2:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
+chalk@^2.4.0:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
+  dependencies:
+    ansi-styles "^3.2.1"
+    escape-string-regexp "^1.0.5"
+    supports-color "^5.3.0"
+
 chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
@@ -1557,6 +1565,12 @@ telegraf-calendar-telegram@^1.5.4:
   resolved "https://registry.yarnpkg.com/telegraf-calendar-telegram/-/telegraf-calendar-telegram-1.5.4.tgz#cae88f78ed8d74593c59cab692a5d846ddd25def"
   dependencies:
     telegraf "^3.6.7"
+
+telegraf-update-logger@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/telegraf-update-logger/-/telegraf-update-logger-1.1.0.tgz#58693fdb8ab3b84d95c471b0cae529c3d6c8580e"
+  dependencies:
+    chalk "^2.4.0"
 
 telegraf@^3.14.1, telegraf@^3.6.7:
   version "3.20.0"
