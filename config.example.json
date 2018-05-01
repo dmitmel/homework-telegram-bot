@@ -3,7 +3,7 @@
     "token": "",
     "webhookPath": "/secret-path"
   },
-  "db": {
-    "path": "db.json"
+  "database": {
+    "path": "database.json"
   }
 }

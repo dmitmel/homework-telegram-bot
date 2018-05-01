@@ -24,6 +24,7 @@
   "dependencies": {
     "chalk": "^2.3.2",
     "localtunnel": "^1.9.0",
+    "lowdb": "^1.0.0",
     "telegraf": "^3.14.1",
     "telegraf-calendar-telegram": "^1.5.4",
     "telegraf-update-logger": "^1.1.0",
