@@ -1,4 +1,3 @@
-const Bot = require('../lib');
+const { startPolling } = require('../lib');
 
-const bot = new Bot();
-bot.startPolling();
+startPolling();

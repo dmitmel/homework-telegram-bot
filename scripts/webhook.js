@@ -1,8 +1,7 @@
 const getEnv = require('../lib/utils/getEnv');
-const Bot = require('../lib');
+const { startWebhook } = require('../lib');
 
 const serverURL = getEnv('WEBHOOK_SERVER_URL');
 const port = getEnv('WEBHOOK_PORT', 3000);
 
-const bot = new Bot();
-bot.startWebhook(serverURL, port);
+startWebhook(serverURL, port);
