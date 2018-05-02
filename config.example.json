@@ -4,6 +4,6 @@
     "webhookPath": "/secret-path"
   },
   "database": {
-    "path": "database.json"
+    "file": "database.json"
   }
 }
