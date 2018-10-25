@@ -4,6 +4,6 @@
     "webhookPath": "/secret-path"
   },
   "database": {
-    "file": "database.json"
+    "url": "mongodb://hostname:port/database"
   }
 }
