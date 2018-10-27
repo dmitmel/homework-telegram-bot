@@ -28,11 +28,12 @@
     "telegraf": "^3.14.1",
     "telegraf-calendar-telegram": "^1.5.4",
     "telegraf-update-logger": "^1.1.0",
+    "triple-beam": "^1.3.0",
     "winston": "^3.0.0-rc4"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-dmitmel": "^1.1.1",
+    "eslint": "^5.8.0",
+    "eslint-config-dmitmel": "^2.0.0",
     "supervisor": "^0.12.0"
   }
 }
