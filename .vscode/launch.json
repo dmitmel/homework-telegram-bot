@@ -7,8 +7,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "index.js",
-      "program": "${workspaceFolder}/index.js"
+      "name": "debug",
+      "program": "${workspaceFolder}/scripts/start.js",
+      "console": "integratedTerminal"
     }
   ]
 }
