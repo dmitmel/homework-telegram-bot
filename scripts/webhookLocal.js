@@ -2,22 +2,31 @@ const chalk = require('chalk').default;
 const localtunnel = require('localtunnel');
 const logger = require('../lib/logger');
 const onExit = require('../lib/utils/onExit');
-const getEnv = require('../lib/utils/getEnv');
 const { startWebhook } = require('../lib');
+const config = require('../config.json');
 
-const port = getEnv('WEBHOOK_PORT', 3000);
+function createLocalTunnel(port) {
+  return new Promise((resolve, reject) => {
+    localtunnel(port, (error, tunnel) => {
+      if (error) reject(error);
+      else resolve(tunnel);
+    });
+  });
+}
 
-logger.info('creating local tunnel');
-const tunnel = localtunnel(port, (error, tunnelInfo) => {
-  if (error) throw error;
+const { hostname, port, path } = config.webhook;
 
-  const { url } = tunnelInfo;
+createLocalTunnel(port).then(tunnel => {
+  logger.info(
+    'local tunnel created: %s -> %s',
+    chalk.cyan(`http://${hostname}:${port}`),
+    chalk.cyan(tunnel.url),
+  );
 
-  logger.info('local tunnel created: %s', chalk.cyan(url));
-  startWebhook(url, port);
-});
+  onExit(() => {
+    logger.info('closing local tunnel');
+    tunnel.close();
+  });
 
-onExit(() => {
-  logger.info('closing local tunnel');
-  tunnel.close();
+  startWebhook(hostname, port, new URL(path, tunnel.url));
 });
